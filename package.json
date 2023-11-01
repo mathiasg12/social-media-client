@@ -1,6 +1,6 @@
 {
   "name": "css-frameworks-ca",
-  "version": "1.0.6",
+  "version": "1.0.5",
   "description": "Test",
   "main": "index.js",
   "scripts": {
@@ -9,9 +9,9 @@
     "prepare": "husky install",
     "test-jest": " npm run unit-test",
     "unit-test": "jest",
-    "e2e-cli": "npm run cypress-test",
-    "e2e-browser": "cypress open",
-    "cypress-test": "cypress run"
+    "e2e-cli":"npm run cypress-test",
+    "e2e-browser":"cypress open",
+    "cypress-test":"cypress run"
   },
   "keywords": [],
   "author": "Noroff",
