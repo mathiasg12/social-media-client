@@ -9,5 +9,15 @@
         "sourceType": "module"
     },
     "rules": {
-    }
+    },
+    "ignorePatterns": ["**/*.test.js"],
+    "overrides": [
+        {
+          "files": ["**/*.test.js"],
+          "env": { "jest": true },
+          "plugins": ["jest"],
+          "extends": ["plugin:jest/recommended"],
+          "rules": { "jest/prefer-expect-assertions": "off" }
+        }
+      ]
 }
