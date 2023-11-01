@@ -6,7 +6,9 @@
   "scripts": {
     "build": "sass src/scss:dist/css",
     "start": "sass --watch src/scss:dist/css & live-server",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test-jest":" npm run unit-test",
+    "unit-test":"jest"
   },
   "keywords": [],
   "author": "Noroff",
