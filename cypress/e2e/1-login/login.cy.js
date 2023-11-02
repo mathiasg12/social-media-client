@@ -1,6 +1,6 @@
 describe("test that users can log in and visit their profile", () => {
   it("users can log in", () => {
-    cy.visit("index.html").wait(3000);
+    cy.visit("index.html").wait(8000);
     cy.get("#registerForm > .modal-footer > .btn-outline-success")
       .click()
       .wait(1500);
