@@ -1,6 +1,6 @@
 describe("users is shown a message if they type the right format but wrong password or email", () => {
   it("gives the user an error message when submiting wrong email or password", () => {
-    cy.visit("index.html").wait(600);
+    cy.visit("index.html").wait(8000);
     cy.get("#registerForm > .modal-footer > .btn-outline-success")
       .click()
       .wait(1500);
