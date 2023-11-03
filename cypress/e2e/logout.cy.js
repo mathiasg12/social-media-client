@@ -12,5 +12,7 @@ describe("test that users can log out with the log out button", () => {
     ).as("apiResp");
     cy.wait("@apiResp");
     cy.get(".btn-outline-warning").click();
+    cy.wait(3000);
+    cy.window().its("localStorage.token").should("not.exist");
   });
 });

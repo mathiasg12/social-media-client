@@ -9,8 +9,7 @@ describe("test that users can log in and visit their profile", () => {
     cy.get("#loginForm > .modal-footer > .btn-success").click();
     cy.intercept("/?view=profile&name=JS2TEST2").as("profilePage");
     cy.wait("@profilePage");
-    cy.url().should("include", "/?view=profile&name=JS2TEST2", () => {
-      expect(localStorage.getItem("token").to.exist());
-    });
+    cy.window().its("localStorage.token").should("exist");
+    cy.url().should("include", "/?view=profile&name=JS2TEST2");
   });
 });
