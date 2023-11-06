@@ -13,3 +13,5 @@
 - tests that a user can login and access their profile
 - tests that a user can not submit a login form with invalid credentials
 - tests that a user can press the logout button and log out
+#### Issues
+-404 error messages are found on most pages, I created an issue in the issue tab 
