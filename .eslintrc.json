@@ -10,7 +10,6 @@
     },
     "rules": {
     },
-    "ignorePatterns": ["**/*.test.js","**/*.cy.js","cypress.config.js"],
     "overrides": [
         {
           "files": ["**/*.test.js","**/*.cy.js"],
