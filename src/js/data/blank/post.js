@@ -33,4 +33,3 @@ export const BLANK_POST = {
     reactions: 0,
   },
 };
-console.log("Intentional Error");
