@@ -39,15 +39,7 @@
     "jest": "^29.7.0"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "eslint --fix"
-    ],
-    "*.html": [
-      "prettier --write"
-    ],
-    "*.scss": [
-      "prettier --write"
-    ]
+    "*.js": "eslint --cache --fix",
+    "*.{js,scss,html}": "prettier --write"
   }
 }
