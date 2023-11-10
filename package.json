@@ -11,7 +11,12 @@
     "unit-test": "jest",
     "e2e-cli": "npm run cypress-test",
     "e2e-browser": "cypress open",
-    "cypress-test": "cypress run"
+    "cypress-test": "cypress run",
+    "format-js": "prettier -w src/js/**/*.js",
+    "format-scss": "prettier -w src/scss/*.scss",
+    "format-html": "prettier -w *.html",
+    "eslint": "eslint src/**/*.js",
+    "eslint-fix": "eslint src/**/*.js --cache --fix"
   },
   "keywords": [],
   "author": "Noroff",
