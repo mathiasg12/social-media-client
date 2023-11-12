@@ -1,5 +1,6 @@
 import { login } from "../js/api/auth/login.js";
 import { logout } from "../js/api/auth/logout.js";
+//mock local storage
 const mockLocalStorage = (() => {
   let localStorage = {};
   let localStorageMethods = {
@@ -10,6 +11,18 @@ const mockLocalStorage = (() => {
   };
   return localStorageMethods;
 })();
+//mock response
+global.fetch = jest.fn(() =>
+  Promise.resolve({
+    ok: true,
+    json: () =>
+      Promise.resolve({
+        name: "examplename",
+        email: email,
+        accessToken: "exampleTokenAbc123456789",
+      }),
+  }),
+);
 const email = "test12345@noroff.no";
 const password = "abc12345";
 global.localStorage = mockLocalStorage;
@@ -22,7 +35,9 @@ describe("login function fetches and stores an access token in local storage", (
   });
   it("tests if the accestoken exists and the function stores the accesstoken in local storage", async () => {
     expect(mockLocalStorage.getItem("token")).toBeTruthy();
-    expect(typeof mockLocalStorage.getItem("token")).toBe("string");
+    expect(mockLocalStorage.getItem("token")).toBe(
+      '"exampleTokenAbc123456789"',
+    );
     expect(mockLocalStorage.getItem("token").length).toBeGreaterThan(10);
   });
 });
